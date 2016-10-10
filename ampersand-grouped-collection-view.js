@@ -71,7 +71,8 @@ module.exports = View.extend({
 
         var view = new this.itemView(extend({
             containerEl: this.currentGroupView.containerEl,
-            model: model
+            model: model,
+            parent: this.currentGroupView
         }, this.itemViewOptions));
         view.render();
         this.itemViews.push(view);
