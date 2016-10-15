@@ -60,7 +60,8 @@ module.exports = View.extend({
         if (!this.currentGroup || !this.lastModel || !this.groupsWith(model, this.lastModel, this.currentGroup)) {
             var group = this.prepareGroup(model, this.currentGroup);
             var groupView = new this.groupView(extend({
-                model: group
+                model: group,
+                parent: this
             }, this.groupViewOptions));
             groupView.render();
             this.el.appendChild(groupView.el);
